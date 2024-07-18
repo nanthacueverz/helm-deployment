@@ -1,0 +1,21 @@
+image:
+    repository: nanthakumarcueverz/helmfrontend
+    tag: 'master'
+
+service:
+    type: NodePort
+    port: 8000
+
+mysql:
+    host: my-mysql.default.svc.cluster.local
+    database: cueverzteam
+    user: admin
+    password: Team1234#
+
+ingress:
+    enabled: false
+    annotations: {}
+    hosts:
+        - host: chart-example.local
+          paths: []
+    tls: []

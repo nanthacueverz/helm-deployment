@@ -1,0 +1,13 @@
+replicaCount: 5
+
+image:
+    repository: nanthakumarcueverz/helmfrontend
+    tag: 'master'
+
+backendService:
+    host: 'python-api'
+    port: '8000'
+
+service:
+    type: ClusterIP
+    port: 3000
