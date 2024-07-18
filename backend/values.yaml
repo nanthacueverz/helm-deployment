@@ -1,5 +1,5 @@
 image:
-    repository: nanthakumarcueverz/helmfrontend
+    repository: nanthakumarcueverz/helmbackend
     tag: 'master'
 
 service:
