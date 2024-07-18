@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: python-api
 spec:
-  replicas: 1
+  replicas: {{ .Values.replicaCount }}
   selector:
     matchLabels:
       app: python-api
@@ -26,3 +26,10 @@ spec:
               value: "{{ .Values.mysql.user }}"
             - name: MYSQL_PASSWORD
               value: "{{ .Values.mysql.password }}"
+          resources:
+            requests:
+              cpu: "100m"
+              memory: "200Mi"
+            limits:
+              cpu: "500m"
+              memory: "512Mi"
